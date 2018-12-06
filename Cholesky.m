@@ -1,5 +1,5 @@
 function x = Cholesky(A)
-
+%Cholesky([60 30 20; 30 20 15; 20 15 12])
 %Método de Cholesky solo funciona con matrices cuadradas
 %[nxn]
 %Formula Rx=Y

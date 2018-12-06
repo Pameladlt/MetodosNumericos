@@ -1,10 +1,12 @@
+
+%GramSchmidt([1 4 7; 1 4 6; 4 6 6])
 function GramSchmidt(A)
 %A puede ser una matriz de mxn
 %Factorizacion QR construida mediante el proceso de ortogonalizacion de
 %Gram Schmidt
 n=size(A,1);
 Q=ones(n); 
-R=ones(n); %Matriz triangular tamaño n
+R=ones(n); %Matriz triangular tamaÃ±o n
 %Ejemplo A=[1 2 -2; 0 1 2; 1 0 0]
 for j=1:n
     v=A(:,j);

@@ -1,4 +1,4 @@
-function [t,w]=FunEuler(fun,a,b,yt0,n)%la funcion Euler necesita lo sig:
+function [t,w]=eulercauchy(fun,a,b,yt0,n)%la funcion Euler necesita lo sig:
 %fun: funcion a evaluar
 %rango de intervalos: a(valor inicial), b(valor final)
 %yt0= valor inicial de a evaluar cuando t=0

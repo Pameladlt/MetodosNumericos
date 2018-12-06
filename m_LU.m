@@ -1,3 +1,6 @@
+
+%m_LU([1 1 -3 4; 6 4 -6 2; 3 -6 4 1; -6 3 3 4],[1;-2;8;4])
+
 % Método de descomposición LU
 % A debe ser una matriz cuadrada mxn, o sea m=n (m filas, n columnas)
 % Esta función nos devolverá los valores de x, al ingresar una matriz A

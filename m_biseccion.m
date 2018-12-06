@@ -1,4 +1,5 @@
-% Método de la bisección:
+%m_biseccion('@(x)x^2+1',0,2,0.001) 
+%Método de la bisección:
 % 1. Selecciona un intervalo [a,b]
 % 2. Calculo del punto medio como nuevo punto
 % 3. Revisión de cambio de signo, producto f(a)·f(b)
@@ -7,7 +8,7 @@
 
 % En esta función se deben ingresar los siguientes datos:
 % - la función a evaluar (f),
-% - el límite inferior (a) y superior (b),
+% - el límite superior (a) e inferior (b),
 % - y la tolerancia de error posible (e).
 
 function [y] = m_biseccion(f,a,b,e)

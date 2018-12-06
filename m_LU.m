@@ -7,6 +7,8 @@ function [x] = m_LU(A,b)
 
 clc
 
+format short
+
 [n,n] = size (A); 
 % Esto nos ayudará, para que podamos trabajar
 % con distintos tamaños de matriz, por lo cual,
@@ -29,6 +31,7 @@ y = inv(L)*b; % Valor auxiliar para encontrar valores de x
 
 x = inv(U)*y;
 
+fprintf('Los valores para x son:')
 
 
 

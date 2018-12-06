@@ -3,6 +3,22 @@ function x = Cholesky(A)
 %Método de Cholesky solo funciona con matrices cuadradas
 %[nxn]
 %Formula Rx=Y
+
+%Pasos para resolver Cholesky A mano:
+%Nos dan una matriz A y un vector b
+%Seguimos la formula = Atraspuesta*y = b
+%Trasponemos la matriz y lo multiplicamos por y y lo igualamos a b
+%hacemos la solucion de ecuaciones
+
+
+%Pasos para resolver Cholesky con Matlab
+%Obtenmos matriz A 
+%Verificamos que sea matriz cuadrada
+%Pedimos un vector, o lo creamos en caso de que no nos lo den 
+% por medio de la funcion chol obtenemos la matriz triangular superior
+%por medio de comandos hacemos la solucion de ecuaciones
+%despejamos para obtener los resultados
+
 [m,n]=size(A);
 if m~=n, error('NO SE PUEDE USAR ESTE METODO CON UNA MATRIZ MxN, TIENE QUE SER CUADRADA'); end
 

@@ -1,3 +1,5 @@
+%LUPivoteo([1 2; -3 4])
+
 function LUPivoteo(A)
 %Factorizacion LU con pivoteo parcial
 [n, n1] = size(A);

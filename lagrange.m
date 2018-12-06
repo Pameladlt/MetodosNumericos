@@ -1,10 +1,12 @@
+
+%lagrange([1 4 5],[4 5 6])
 % Interpolación de Lagrange
 % En esta función se ingresan en forma vectorial los puntos a evaluar,
 % de tal forma que se devuelven los coefecientes del polinomio,
 % recordando que de derecha a izquierda, se comienza con el término 
 % independiente (x^0 = 1) y de ahí se va aumentado el exponencial 
 
-function [C] = m_int_lagrange(x,y) 
+function [C] = lagrange(x,y) 
 
 clc
 

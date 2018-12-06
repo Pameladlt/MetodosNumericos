@@ -29,7 +29,7 @@ e_max_ps = (b-a)/2;
 % Para apreciar las iteraciones y los resultados que 
 % se van obteniendo durante el proceso,
 % se hace el siguiente arreglo:
-fprintf('\t n \t\ta \t\t    c \t\t        b \t\t        Error\n') 
+% fprintf('\t n \t\ta \t\t    c \t\t        b \t\t        Error\n') 
 % \t para tabulación, \n para salto de línea
 
 % Para saber si continuan las iteraciones, se comparan
@@ -37,7 +37,7 @@ fprintf('\t n \t\ta \t\t    c \t\t        b \t\t        Error\n')
 % con la tolerancia de error ingresada (e).
 while (e_max_ps > e)
     c = (a+b)/2;
-    disp([n,a,c,b,e_max_ps]) 
+    %disp([n,a,c,b,e_max_ps]) 
     % De esta manera creamos un vector fila, es decir, los datos se
     % acomodan en un renglón
     if ( fh(a)*fh(c) < 0) 
@@ -53,8 +53,10 @@ while (e_max_ps > e)
     n = n+1;
 end
 
-fprintf('Raiz encontrada con una tolerancia de %f:\n\t%f\n', e, c)
+fprintf('Raiz encontrada con una tolerancia de error de %.10f, en la iteración %.1f:\n\t%.15f\n', e, n, c)
 y = c;
+
+
 
 
 

@@ -1,6 +1,6 @@
 function x = Cholesky(A)
 
-%Método de Cholesky solo funciona con matrices cuadradas
+%MÃ©todo de Cholesky solo funciona con matrices cuadradas
 %[nxn]
 
 [m,n]=size(A);
@@ -13,3 +13,4 @@ disp('U= '); disp(U)
 d=U'\b;
 x=U\d;
 disp('x = '); disp(x)
+end

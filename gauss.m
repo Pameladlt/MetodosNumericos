@@ -1,33 +1,21 @@
-function x=gauss(Mx,vR);
-A=Mx;
-b=vR;
-[m,n]=size(A);
-% Recibimos la Matriz y el vector resultado
-% Asignamos los valores a la matriz 'A' y al vector 'b'
-% Calculamos el valor de 'm*n', el tamaño de la matriz
+%gauss([1 -2 -3; 4 2 -3; 6 -8 6],[1;2;7])
+%Precaucion La matriz debe ser cuadrada
+function x=gauss(MA,Vb); %funcion que recibe una matriz y un vector
 
-if (m~=n)
-    error('La matriz debe ser cuadrada');
+A=MA;
+b=Vb;
+[a,n]=size(A);
+lim=n+1;
+completa=[A b];
+for(j=1:n-1)
+for(i=j+1:n)
+factor=completa(i,j)/completa(j,j);
+completa(i,j:lim)=completa(i,j:lim)-factor*completa(j,j:lim);
 end
-%Verificamos que la matriz sea cuadrada
-
-N=n+1;
-doubleA=[A b];
-
-
-% Eliminación hacia adelante
-for(k=1:n-1)
-    for(i=k+1:n)
-        factor=doubleA(i,k)/doubleA(k,k);
-        doubleA(i,k:N)=doubleA(i,k:N)-factor*doubleA(k,k:N);
-    end
 end
-
-% Sustitución hacia atrás
 x=zeros(n, 1);
-x(n)=doubleA(n,N)/doubleA(n,n);
-
+x(n)=completa(n,lim)/completa(n,n);
 for(i=n-1:-1:1)
-    x(i)=(doubleA(i,N)-doubleA(i,i+1:n)*x(i+1:n))/doubleA(i,i);
+x(i)=(completa(i,lim)-completa(i,i+1:n)*x(i+1:n))/completa(i,i);
 end
 x(i);

@@ -1,3 +1,10 @@
+%como ingresar los vectores: 
+%e=[0;-1;-1;-1];
+%f=[2.04;2.04;2.04;2.04];
+%g=[-1;-1;-1;];
+%r=[40.08;0.08;0.08;200.8];
+%Thomas(e,f,g,r)
+
 function x = Thomas(e,f,g,r)
 %e=Vector diagonal superior contigua a la principal
 %f=Vector diagonal principal

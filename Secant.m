@@ -1,3 +1,13 @@
+% 
+% Ingrese el intervalo inferior: 0
+% Ingrese el intervalo superior: 2
+% Ingrese el porcentaje de error: 0.0001
+% Ingrese la funciòn: x+1
+%  i     xf(i)         Error aprox (i) 
+%  1	  2.0000000	100.000
+%  2	 -1.0000000	300.000
+%  3	 -1.0000000	 -0.000
+
 xf(1)=input('Ingrese el intervalo inferior: ');
 xf(2)=input('Ingrese el intervalo superior: ');
 tol=input('Ingrese el porcentaje de error: ');

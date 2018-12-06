@@ -1,0 +1,18 @@
+function FactorizacionLU(a)
+%Factorización LU
+%n es el tamaño de la matriz.
+%el argumento a es la matriz a factorizar.
+%recibir las dos matrices, la L y la U
+disp('Matriz A:')
+n=length(a);
+disp(a)
+for k=1:n 
+    a(k+1:n,k) = a(k+1:n,k)/a(k,k);
+    a(k+1:n,k+1:n) = a(k+1:n,k+1:n)- a(k+1:n,k)*a(k,k+1:n); 
+end
+% Se crean las matrices L y U
+disp('Factorización LU de la matriz A:')
+disp('Matriz L:')
+L = eye(n,n) + tril(a,-1)
+disp('Matriz U:')
+U = triu(a)

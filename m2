@@ -1,25 +1,22 @@
-
 %Metodo Minimos Cuadrados
 %intenta determinar la función continua que mejor se aproxime a los datos 
 
-function f = m2(x,y)
+function f=m2(Vectorx,Vectory)
+FuncionAproximada = polyfit(Vectorx,Vectory,2);
+min=Vectorx(1);
+max=Vectorx(1);
 
-C = polyfit(x,y,2);
-min=x(1);
-max=x(1);
-for(i=2:length(x))
-    if(x(i-1)<x(i))
-       %disp(max)
-       max=x(i);
-       %disp(max)
+for(i=2:length(Vectorx))
+    if(Vectorx(i-1)<Vectorx(i))
+       max=Vectorx(i);
     end
-    if(x(i-1)>x(i))
-        disp('min')
-        min=x(i);
+    if(Vectorx(i-1)>Vectorx(i))
+        min=Vectorx(i);
     end
 end
 
 xx=linspace(min, max, 100);
-yy=polyval(C,xx);
+yy=polyval(FuncionAproximada,xx);
 disp(xx)
 disp(yy)
+plot(xx,yy)

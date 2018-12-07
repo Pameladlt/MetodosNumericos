@@ -10,8 +10,7 @@ y=zeros();
 h=(b-a)/n;
 
 x(1)=a; %el primer valor para x
-y(1)=yt0; %esto es para que se aplique la condicion iniclal en y
-%siguiendo el algoritmo presentado en clase:
+y(1)=yt0; 
 for i=1:n 
    x(i+1)=a+h*i; 
    k1=feval(fun,x(i),y(i)); y(i)

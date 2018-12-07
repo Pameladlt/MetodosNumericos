@@ -34,6 +34,10 @@ y = inv(L)*b; % Valor auxiliar para encontrar valores de x
 
 x = inv(U)*y;
 
+L 
+
+U 
+
 fprintf('Los valores para x son:')
 
 

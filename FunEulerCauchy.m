@@ -1,7 +1,7 @@
 function eulerCauchy(a,b,yt0,n)
 %input
-%a=valor inicial
-%b=valor final
+%a=valor inicial (Intervalo)
+%b=valor final (Intervalo)
 %yt0= valor inicial
 %n= cantidad de intervalos
 

@@ -8,7 +8,7 @@
 
 % En esta función se deben ingresar los siguientes datos:
 % - la función a evaluar (f),
-% - el límite superior (a) e inferior (b),
+% - el límite inferior (a) y superior (b), ya que a siempre debe ser menor a b
 % - y la tolerancia de error posible (e).
 
 function [y] = m_biseccion(f,a,b,e)
